@@ -38,6 +38,6 @@
     "autoprefixer": "^10.2.6",
     "compression": "^1.7.4",
     "tailwindcss": "^2.2.4",
-    "vite": "^2.4.1"
+    "vite": "^2.4.2"
   }
 }
