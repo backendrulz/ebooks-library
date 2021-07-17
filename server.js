@@ -8,7 +8,7 @@ const { fromPath } = require('pdf2pic')
 const dotenv = require('dotenv');
 dotenv.config();
 const port = process.env.SERVER_PORT
-const booksPath = process.env.BOOKS_PATH
+let booksPath = process.env.BOOKS_PATH
 
 // CORS
 // const corsOptions = {
@@ -56,7 +56,11 @@ async function createServer (
     app.get('/api/downloadBook/:type/:pdfFile', (req, res) => {
         const type = req.params.type
         const fileName = req.params.pdfFile
-        const directoryPath = booksPath
+        let directoryPath = booksPath
+
+        if (type == 'tales') {
+            directoryPath = path.join(directoryPath, 'Cuentos')
+        }
 
         res.download(path.join(directoryPath, fileName), fileName, (err) => {
             if (err) {

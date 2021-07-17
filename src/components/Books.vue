@@ -26,13 +26,13 @@
         >
           <BookOpenIcon class="h-5 w-5 text-white" />
         </router-link>
-        <router-link
-          :to="`/api/downloadBook/${type}/${book.name}`"
+        <a
+          :href="`/api/downloadBook/${type}/${book.name}`"
           class="btn btn-download"
           title="Descargar"
         >
           <DownloadIcon class="h-5 w-5 text-white" />
-        </router-link>
+        </a>
       </div>
 
     </div>
@@ -54,7 +54,7 @@ export default {
       require: true,
     },
   },
- async setup (props) {
+  async setup (props) {
     let booksData = ref([]);
     booksData = await BooksService.getAllBooks(props.type)
 
