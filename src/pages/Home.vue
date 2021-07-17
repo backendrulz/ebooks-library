@@ -38,7 +38,7 @@ export default {
       ],
     })
 
-    return { type }
+    return { type, siteData }
   },
   components: { Books }
 

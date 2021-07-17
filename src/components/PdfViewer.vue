@@ -1,6 +1,6 @@
 <template>
   <iframe
-    src="https://drive.google.com/viewerng/viewer?embedded=true&amp;url=https://www.orimi.com/pdf-test.pdf#toolbar=0&amp;scrollbar=0"
+    :src="`https://drive.google.com/viewerng/viewer?embedded=true&amp;url=${url}&amp;scrollbar=0`"
     frameBorder="0"
     scrolling="auto"
     class="w-full h-screen"
@@ -16,10 +16,20 @@
 export default {
   name: "PDFViewer",
   props: {
-    url: {
+    type: {
       type: String,
-      require: true,
+      require: true
     },
+    bookFile: {
+      type: String,
+      require: true
+    }
+  },
+  setup (props) {
+    let url = `${import.meta.env.VITE_URL}/api/downloadBook/${props.type}/${props.bookFile}`
+
+    return { url }
   }
 }
+
 </script>

@@ -20,7 +20,7 @@
       <!-- <div class="flex flex-col object-bottom"> -->
       <div class="text-center">
         <router-link
-          :to="{ name: 'read', params: { type: type, pdfName: book.name }}"
+          :to="{ name: 'read', params: { type: type, bookFile: book.name }}"
           class="btn btn-read"
           title="Leer"
         >

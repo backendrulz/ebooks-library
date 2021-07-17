@@ -13,7 +13,7 @@ const routes = [
     { path: '/', component: Home },
     { path: '/libros', component: Books, props: { type: 'books' } },
     { path: '/cuentos', component: Books, props: { type: 'tales' } },
-    { path: '/leer/:type/:pdfName', name: 'read', component: PdfViewer },
+    { path: '/leer/:type/:bookFile', name: 'read', component: PdfViewer, props: true },
     { path: '/:path(.*)', component: NotFound },
 ]
 
