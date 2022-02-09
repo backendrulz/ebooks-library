@@ -17,7 +17,7 @@
     "@vueuse/head": "^0.6.0",
     "axios": "^0.21.1",
     "cors": "^2.8.5",
-    "directory-tree": "^2.3.1",
+    "directory-tree": "^3.2.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "pdf2pic": "^2.1.4",
