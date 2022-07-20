@@ -22,7 +22,7 @@
     "express": "^4.17.1",
     "pdf2pic": "^2.1.4",
     "vue": "^3.2.6",
-    "vue-router": "^4.0.10"
+    "vue-router": "^4.1.2"
   },
   "devDependencies": {
     "@headlessui/vue": "^1.6.7",
